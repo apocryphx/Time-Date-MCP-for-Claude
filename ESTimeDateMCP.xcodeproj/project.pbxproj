@@ -23,7 +23,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/zsh;
-			shellScript = "# Copy built binary into bundle\ncp \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}\" \"${SRCROOT}/bundle/server/${PRODUCT_NAME}\"\n\n# Pack MCPB\nexport PATH=\"/opt/homebrew/bin:/usr/local/bin:$PATH\"\nnpx @anthropic-ai/mcpb pack \"${SRCROOT}/bundle/\" \"${SRCROOT}/ESTimeDateMCP.mcpb\"\n";
+			shellScript = "# Copy built binary into bundle\ncp \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}\" \"${SRCROOT}/bundle/server/${PRODUCT_NAME}\"\n\n# Re-sign for distribution (codesign is stripped by cp in some contexts)\ncodesign --force --sign - --entitlements \"${SRCROOT}/ESTimeDateMCP/ESTimeDateMCP.entitlements\" -o runtime \"${SRCROOT}/bundle/server/${PRODUCT_NAME}\"\n\n# Pack MCPB\nexport PATH=\"/opt/homebrew/bin:/usr/local/bin:$PATH\"\nnpx @anthropic-ai/mcpb pack \"${SRCROOT}/bundle/\" \"${SRCROOT}/ESTimeDateMCP.mcpb\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

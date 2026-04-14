@@ -59,9 +59,9 @@ static NSDictionary *ExecuteGetCurrentDatetime(void) {
 
 static NSDictionary *HandleInitialize(NSDictionary *params) {
     NSString *clientVersion = params[@"protocolVersion"];
-    NSSet *supported = [NSSet setWithArray:@[@"2024-11-05", @"2025-03-26", @"2025-06-18"]];
+    NSSet *supported = [NSSet setWithArray:@[@"2024-11-05", @"2025-03-26", @"2025-06-18", @"2025-11-25", @"2026-03-26"]];
     NSString *negotiated = (clientVersion && [supported containsObject:clientVersion])
-        ? clientVersion : @"2025-03-26";
+        ? clientVersion : @"2026-03-26";
 
     return @{
         @"protocolVersion": negotiated,
