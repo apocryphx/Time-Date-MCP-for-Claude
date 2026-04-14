@@ -88,6 +88,16 @@ ESTimeDateMCP/
 - Xcode (to build from source)
 - Claude Desktop (to use the extension)
 
+## Privacy Policy
+
+This extension collects no data. It reads your Mac's system clock and returns the result to Claude over a local pipe. No network requests, no analytics, no data leaves your machine. For complete privacy information, see our [privacy policy](https://github.com/apocryphx/Time-Date-MCP-for-Claude/blob/main/PRIVACY.md).
+
+### Data Collection
+- No personal information is collected or stored
+- No network requests are made — fully offline
+- No data is shared with third parties
+- No data is retained between calls
+
 ## License
 
 MIT

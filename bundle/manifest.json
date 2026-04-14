@@ -24,6 +24,9 @@
   ],
   "keywords": ["time", "date", "timezone"],
   "license": "MIT",
+  "privacy_policies": [
+    "https://github.com/apocryphx/Time-Date-MCP-for-Claude/blob/main/PRIVACY.md"
+  ],
   "compatibility": {
     "platforms": ["darwin"]
   }

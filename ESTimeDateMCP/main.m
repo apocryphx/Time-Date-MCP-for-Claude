@@ -85,6 +85,13 @@ static NSDictionary *HandleToolsList(void) {
                 @"type": @"object",
                 @"properties": @{},
                 @"required": @[]
+            },
+            @"annotations": @{
+                @"title": @"Get Current Date & Time",
+                @"readOnlyHint": @YES,
+                @"destructiveHint": @NO,
+                @"idempotentHint": @YES,
+                @"openWorldHint": @NO
             }
         }
     ]};
